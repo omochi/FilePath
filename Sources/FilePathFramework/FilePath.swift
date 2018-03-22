@@ -179,7 +179,7 @@ public struct FilePath :
         return FilePath(fm.currentDirectoryPath)
     }
     
-    public static var temporery: FilePath {
+    public static var temporary: FilePath {
         return FilePath(NSTemporaryDirectory())
     }
     
