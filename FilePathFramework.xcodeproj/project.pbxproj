@@ -11,6 +11,8 @@
 		D6ACB1DB20637734001E6C56 /* FilePathError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACB1D920637734001E6C56 /* FilePathError.swift */; };
 		D6ACB1DF206377B1001E6C56 /* FilePathFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D6ACB1DD206377B1001E6C56 /* FilePathFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6ACB1EF206378B8001E6C56 /* FilePathFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D6ACB1DD206377B1001E6C56 /* FilePathFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6ACB2B7206389DB001E6C56 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACB1D820637734001E6C56 /* FilePath.swift */; };
+		D6ACB2B8206389DB001E6C56 /* FilePathError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACB1D920637734001E6C56 /* FilePathError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6ACB2B7206389DB001E6C56 /* FilePath.swift in Sources */,
+				D6ACB2B8206389DB001E6C56 /* FilePathError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
