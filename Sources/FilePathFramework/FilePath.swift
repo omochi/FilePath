@@ -161,6 +161,20 @@ public struct FilePath :
         return try fm.attributesOfItem(atPath: asString())
     }
     
+    public func openReadingHandle() throws -> FileHandle {
+        guard let handle = FileHandle(forReadingAtPath: asString()) else {
+            throw FilePathError(message: "open reading handle failed: \(self)")
+        }
+        return handle
+    }
+    
+    public func openWritingHandle() throws -> FileHandle {
+        guard let handle = FileHandle(forWritingAtPath: asString()) else {
+            throw FilePathError(message: "open writing handle failed: \(self)")
+        }
+        return handle
+    }
+    
     public static var current: FilePath {
         return FilePath(fm.currentDirectoryPath)
     }
@@ -171,6 +185,12 @@ public struct FilePath :
     
     public static var permanent: FilePath {
         return FilePath(NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory,
+                                                            .userDomainMask,
+                                                            true)[0])
+    }
+    
+    public static var cache: FilePath {
+        return FilePath(NSSearchPathForDirectoriesInDomains(.cachesDirectory,
                                                             .userDomainMask,
                                                             true)[0])
     }
