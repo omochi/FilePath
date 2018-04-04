@@ -138,7 +138,7 @@ public struct FilePath :
                      createDirectory: Bool = false) throws
     {
         if deleteDestination {
-            try destination.delete()
+            try destination.delete(ifExists: true)
         }
         if createDirectory {
             try destination.parent.createDirectory(withIntermediates: true)
