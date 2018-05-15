@@ -216,7 +216,7 @@ public struct FilePath :
     }
     
     private func asNSString() -> NSString {
-        return value as NSString
+        return NSString(string: value)
     }
     
     private let value: String
