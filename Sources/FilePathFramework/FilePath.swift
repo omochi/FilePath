@@ -4,7 +4,6 @@ private let fm = FileManager.default
 
 public struct FilePath :
     CustomStringConvertible,
-    Equatable,
     Hashable,
     Comparable,
     Codable
@@ -194,11 +193,7 @@ public struct FilePath :
                                                             .userDomainMask,
                                                             true)[0])
     }
-    
-    public var hashValue: Int {
-        return value.hashValue
-    }
-    
+
     public static func +(a: FilePath, b: FilePath) -> FilePath {
         return FilePath(a.asNSString().appendingPathComponent(b.asString()))
     }
